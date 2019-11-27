@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //connectivity
 require('config.php');
 
@@ -17,6 +17,9 @@ $cq = mysqli_query($con,$q);
 $ret = mysqli_num_rows($cq);
 if($ret == true)
 {
+	$row = mysqli_fetch_array($cq);
+		$_SESSION['id'] = $row['id'];
+		
 	echo "<script>document.location='profile.php'</script>";
 	//echo "<center><h2 style='color:green'>ACCESS GRANTED</h2></center>";
 }
@@ -34,8 +37,16 @@ else
 <fieldset style="display: inline-flex; background-color: #D8D8D8;"><legend><font size="+2"><strong>Login Panel</strong></font></legend><p><b>UserName : </b><input type="text" name="uname" required/>*</p>
 <p><b>Password : </b><input type="password" name="upass" required/>*</p><br>
 <p><input type="submit" value="Login" name="login"/></p>
+<p>Forgot password? Reset <a href="forgotpassword.php">here</a>.</p>
 </fieldset>
 </form>
+
+<form method="post">
+<div>
+	Don't have an account? Click <a href="registration.php">here</a> to register.
+</div>
+</form>
+
 </div>
 </body>
 </html> 

@@ -35,7 +35,7 @@ if($ret == true)
 //insert into database
 else
 {
-	$query = "INSERT INTO users(username, password, email, gender, mob, address) VALUES ('$n','$p','$em','$gen','$mob','$add')";
+	$query = "INSERT INTO users(id,username, password, email, gender, mob, address) VALUES ('','$n','$p','$em','$gen','$mob','$add')";
 	//die($query);
 	if(mysqli_query($con,$query)){
 	//mkdir("images/".$_POST['umail']);
