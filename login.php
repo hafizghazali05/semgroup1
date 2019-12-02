@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 //connectivity
 require('config.php');
 
@@ -17,10 +17,7 @@ $cq = mysqli_query($con,$q);
 $ret = mysqli_num_rows($cq);
 if($ret == true)
 {
-	$row = mysqli_fetch_array($cq);
-		$_SESSION['id'] = $row['id'];
-		
-	echo "<script>document.location='profile.php'</script>";
+	echo "<script>document.location='user'</script>";
 	//echo "<center><h2 style='color:green'>ACCESS GRANTED</h2></center>";
 }
 else
