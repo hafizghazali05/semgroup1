@@ -35,17 +35,11 @@ if($ret == true)
 //insert into database
 else
 {
-	$query = "INSERT INTO users(id,username, password, email, gender, mob, address) VALUES ('','$n','$p','$em','$gen','$mob','$add')";
-	//die($query);
-	if(mysqli_query($con,$query)){
+	$query = "INSERT INTO users VALUES ('','$n','$p','$em','$gen','$mob','$add')";
+	mysqli_query($con,$query);
 	//mkdir("images/".$_POST['umail']);
 	//move_uploaded_file($_FILES['file']['tmp_name'],"images/".$_POST['umail']."/".$_FILES['file']['name']);
 	echo "<center><h2 style='color:green'>Details Saved!</h2></center>";
-	}
-	else
-	{
-	    echo "Error : ".mysqli_error($con);
-	}
 }
 }
 else
