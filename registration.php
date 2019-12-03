@@ -35,17 +35,11 @@ if($ret == true)
 //insert into database
 else
 {
-	$query = "INSERT INTO users(id,username, password, email, gender, mob, address) VALUES ('','$n','$p','$em','$gen','$mob','$add')";
-	//die($query);
-	if(mysqli_query($con,$query)){
+	$query = "INSERT INTO users VALUES ('','$n','$p','$em','$gen','$mob','$add')";
+	mysqli_query($con,$query);
 	//mkdir("images/".$_POST['umail']);
 	//move_uploaded_file($_FILES['file']['tmp_name'],"images/".$_POST['umail']."/".$_FILES['file']['name']);
 	echo "<center><h2 style='color:green'>Details Saved!</h2></center>";
-	}
-	else
-	{
-	    echo "Error : ".mysqli_error($con);
-	}
 }
 }
 else
@@ -100,10 +94,11 @@ if(isset($_POST['display']))
 	}
 </script>
 </head>
-<body style="background-color:#E5E5E5">
+
+<center>
 <div align="center">
 <form method="post" enctype="multipart/form-data">
-	<fieldset style="display: inline-flex; background-color: #D8D8D8;">
+	<fieldset style="display: inline-flex;">
 	<legend><font size="+2"><strong>Registration</strong></font></legend>
 	<p><b>UserName : </b><input type="text" name="uname" required/>*</p>
     <p><b>Password : </b><input type="password" name="upass" required/>*</p>
@@ -111,7 +106,7 @@ if(isset($_POST['display']))
     <p><b>Gender : </b><input type="radio" name="gender" value="m">Male&nbsp;<input type="radio" name="gender" value="f">Female</p>
     <p><b>Mobile No. : </b><input type="text" name="umob" required/>*</p>
     <b>Address : </b><textarea placeholder="Input Address" name="address"></textarea>
-<fieldset style="display: inline-flex; background-color: #D8D8D8;"><legend><strong>Verification</strong></legend><p><?php
+<fieldset style="display: inline-flex; "><legend><strong>Verification</strong></legend><p><?php
 error_reporting(1);
 echo $res." = ";
 ?>
@@ -120,5 +115,6 @@ echo $res." = ";
     <p><input type="submit" name="submit" value="Register">&nbsp;<input type="reset" onClick="refresh()"></p>
 </form>
 </div>
-</body>
+</center>
+
 </html>
