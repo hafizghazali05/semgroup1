@@ -37,11 +37,11 @@ if(isset($_POST['submit']))
 ?>
 
 <html>
-<body style="background-color:#E5E5E5">
+<body>
 <div align="center">
 
 <form method="post">
-<fieldset style="display: inline-flex; background-color: #D8D8D8;"><legend><font size="+2"><strong>Forgot Password</strong></font></legend>
+<fieldset style="display: inline-flex;"><legend><font size="+2"><strong>Forgot Password</strong></font></legend>
 <br>
 <table>
 <tr><td><b>UserName :</td><td></b><input type="text" name="uname" required></td></tr><tr></tr>
