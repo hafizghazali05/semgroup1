@@ -103,8 +103,8 @@ $footerdisp = mysqli_fetch_array($q41);
 	  	<h2><b><font size="+3"><?php echo $colgdisp['colgname'];?>
 	    </font></b></h2>
 		</center>
-   		<center><img src="images/colg.jpg" width="696" height="488"></center><br>
-    	<p><b>A pioneer educational Institute of Northern India, has been striving to provide quality higher education since 2000. Approved by AICTE and UGC, ABC has a sprawling multi-discipline campus, world class facilities and competent faculty, with prime focus on research and quality education. Creating a benchmark in the field of education, ABC aims to create proficient technocrats and future leaders with emphasis on overall development of personality imbibing core human values among students.</b><center>
+   		<center><img src="images/colg.jpg" width="696" height="488"></center>
+    	<p><center>
      	 <p>&nbsp;</p>
       	<p><strong><font size="+2"><?php echo $colgdisp['colgname'];?></font></strong> <b>-</b> <font size="+1"><?php echo $introdisp['colgintro']; ?></font></p>
     </center></p>
