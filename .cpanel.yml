@@ -2,4 +2,4 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/azizifah/public_html/sem/
- - /bin/cp -R images $DEPLOYPATH
+ - /bin/cp -R * $DEPLOYPATH
